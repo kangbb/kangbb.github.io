@@ -3,8 +3,8 @@
     <meta charset="utf-8" />
 <meta name="description" content="" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>CSS布局之对齐 | Gridea</title>
-<link rel="shortcut icon" href="https://kangbb.github.io/favicon.ico?v=1562523997570">
+<title>CSS布局之对齐 | 云淡风轻</title>
+<link rel="shortcut icon" href="https://kangbb.github.io/favicon.ico?v=1562524194612">
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
 <link rel="stylesheet" href="https://kangbb.github.io/styles/main.css">
@@ -20,10 +20,10 @@
       <div class="main-content">
         <div class="site-header">
   <a href="https://kangbb.github.io">
-  <img class="avatar" src="https://kangbb.github.io/images/avatar.png?v=1562523997570" alt="">
+  <img class="avatar" src="https://kangbb.github.io/images/avatar.png?v=1562524194612" alt="">
   </a>
   <h1 class="site-title">
-    Gridea
+    云淡风轻
   </h1>
   <p class="site-description">
     温故而知新
@@ -276,12 +276,12 @@ span {
 </ul>
 <p>对于一个块级元素来说，<code>line-height</code>和<code>height</code>是概念不同的，当它们取值关系大小不同时，也会出现不同的结果。<br />
 首先，需要理解4中CSS boxes类型和line-height的定义，具体可以参考这篇文章：<br />
-<a href="https://www.cnblogs.com/fengzheng126/archive/2012/05/18/2507632.html">https://www.cnblogs.com/fengzheng126/archive/2012/05/18/2507632.html</a>
+<a href="https://www.cnblogs.com/fengzheng126/archive/2012/05/18/2507632.html">https://www.cnblogs.com/fengzheng126/archive/2012/05/18/2507632.html</a><br />
 <img src="https://kangbb.github.io/post-images/1562512925124.png" alt="line-height">
 其次，需要重点理解content-area和font-size之间的关系，可以参考：<br />
-<a href="https://alexzhong22c.github.io/2018/02/06/height-calculate/">https://alexzhong22c.github.io/2018/02/06/height-calculate/</a>
+<a href="https://alexzhong22c.github.io/2018/02/06/height-calculate/">https://alexzhong22c.github.io/2018/02/06/height-calculate/</a><br />
 接着，可以理解line-height和height之间的关系，可以参考：<br />
-<a href="https://blog.csdn.net/a2013126370/article/details/82786681">https://blog.csdn.net/a2013126370/article/details/82786681</a>
+<a href="https://blog.csdn.net/a2013126370/article/details/82786681">https://blog.csdn.net/a2013126370/article/details/82786681</a><br />
 当<code>line-height=height</code>时，文字垂直居中；<br />
 当<code>line-height&gt;height</code>时，文字会向下偏移。这是由于一个块级元素大小从左上角开始计算，此时该元素的<code>height</code>会优先满足上半行距，而下半行距被遮住了，所以显得文字向下偏移；<br />
 当<code>line-height&lt;height</code>时，文字会向上偏移。这是由于多出来的<code>height</code>长度位于下半行距下方，所以显得文字向上偏移。<br />
