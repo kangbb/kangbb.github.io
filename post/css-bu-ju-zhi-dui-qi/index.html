@@ -1,22 +1,93 @@
-<?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom">
-    <id>https://kangbb.github.io</id>
-    <title>Gridea</title>
-    <updated>2019-07-07T18:26:40.389Z</updated>
-    <generator>https://github.com/jpmonette/feed</generator>
-    <link rel="alternate" href="https://kangbb.github.io"/>
-    <link rel="self" href="https://kangbb.github.io/atom.xml"/>
-    <subtitle>温故而知新</subtitle>
-    <logo>https://kangbb.github.io/images/avatar.png</logo>
-    <icon>https://kangbb.github.io/favicon.ico</icon>
-    <rights>All rights reserved 2019, Gridea</rights>
-    <entry>
-        <title type="html"><![CDATA[CSS布局之对齐]]></title>
-        <id>https://kangbb.github.io/post/css-bu-ju-zhi-dui-qi</id>
-        <link href="https://kangbb.github.io/post/css-bu-ju-zhi-dui-qi">
-        </link>
-        <updated>2019-07-07T08:32:10.000Z</updated>
-        <content type="html"><![CDATA[<h1 id="1-基本概念">1. 基本概念</h1>
+<html>
+  <head>
+    <meta charset="utf-8" />
+<meta name="description" content="" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>CSS布局之对齐 | Gridea</title>
+<link rel="shortcut icon" href="https://kangbb.github.io/favicon.ico?v=1562523997570">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+<link rel="stylesheet" href="https://kangbb.github.io/styles/main.css">
+
+<script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
+<script src="https://cdn.bootcss.com/moment.js/2.23.0/moment.min.js"></script>
+
+
+
+  </head>
+  <body>
+    <div class="main">
+      <div class="main-content">
+        <div class="site-header">
+  <a href="https://kangbb.github.io">
+  <img class="avatar" src="https://kangbb.github.io/images/avatar.png?v=1562523997570" alt="">
+  </a>
+  <h1 class="site-title">
+    Gridea
+  </h1>
+  <p class="site-description">
+    温故而知新
+  </p>
+  <div class="menu-container">
+    
+      
+        <a href="/" class="menu">
+          首页
+        </a>
+      
+    
+      
+        <a href="./archives" class="menu">
+          归档
+        </a>
+      
+    
+      
+        <a href="/tags" class="menu">
+          标签
+        </a>
+      
+    
+      
+        <a href="/post/about" class="menu">
+          关于
+        </a>
+      
+    
+  </div>
+  <div class="social-container">
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+  </div>
+</div>
+
+
+        <div class="post-detail">
+          <article class="post">
+            <h2 class="post-title">
+              CSS布局之对齐
+            </h2>
+            <div class="post-info">
+              <time class="post-time">
+                · 2019-07-07 ·
+              </time>
+              
+            </div>
+            
+              <div class="post-feature-image" style="background-image: url('https://kangbb.github.io/post-images/css-bu-ju-zhi-dui-qi.jpg')">
+              </div>
+            
+            <div class="post-content">
+              <h1 id="1-基本概念">1. 基本概念</h1>
 <h2 id="11-水平居中和垂直居中">1.1 水平居中和垂直居中</h2>
 <p>水平居中：元素位于水平方向中央<br />
 垂直居中：元素位于垂直方向中央</p>
@@ -434,6 +505,51 @@ span {
   margin: auto;
 }
 </code></pre>
-]]></content>
-    </entry>
-</feed>
+
+            </div>
+          </article>
+        </div>
+
+        
+
+        
+          
+            <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
+<script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+
+<div id="gitalk-container"></div>
+
+<script>
+
+  var gitalk = new Gitalk({
+    clientID: '6bdf773b1ff0c3c0ef80',
+    clientSecret: 'af09181e53eb755423b7b497a44a7cb794a7fa08',
+    repo: 'kangbb.github.io',
+    owner: 'kangbb',
+    admin: ['kangbb'],
+    id: (location.pathname).substring(0, 49),      // Ensure uniqueness and length less than 50
+    distractionFreeMode: false  // Facebook-like distraction free mode
+  })
+
+  gitalk.render('gitalk-container')
+
+</script>
+
+          
+
+          
+        
+
+        <div class="site-footer">
+  Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a> | 
+  <a class="rss" href="https://kangbb.github.io/atom.xml" target="_blank">RSS</a>
+</div>
+
+<script>
+  hljs.initHighlightingOnLoad()
+</script>
+
+      </div>
+    </div>
+  </body>
+</html>
