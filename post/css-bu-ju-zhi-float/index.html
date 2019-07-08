@@ -4,7 +4,7 @@
 <meta name="description" content="" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>CSS布局之float | 云淡风轻</title>
-<link rel="shortcut icon" href="https://kangbb.github.io/favicon.ico?v=1562563085730">
+<link rel="shortcut icon" href="https://kangbb.github.io/favicon.ico?v=1562563715458">
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
 <link rel="stylesheet" href="https://kangbb.github.io/styles/main.css">
@@ -20,7 +20,7 @@
       <div class="main-content">
         <div class="site-header">
   <a href="https://kangbb.github.io">
-  <img class="avatar" src="https://kangbb.github.io/images/avatar.png?v=1562563085730" alt="">
+  <img class="avatar" src="https://kangbb.github.io/images/avatar.png?v=1562563715458" alt="">
   </a>
   <h1 class="site-title">
     云淡风轻
@@ -83,6 +83,9 @@
               
             </div>
             
+              <div class="post-feature-image" style="background-image: url('https://kangbb.github.io/post-images/css-bu-ju-zhi-float.jpg')">
+              </div>
+            
             <div class="post-content">
               <h1 id="1-基本概念">1. 基本概念</h1>
 <p>要深入理解float，首先需要理解下面几个概念：</p>
@@ -91,7 +94,7 @@
 <li>**margin外边距叠加。**可以参考：<a href="https://segmentfault.com/a/1190000010346113">https://segmentfault.com/a/1190000010346113</a></li>
 </ul>
 <h1 id="2-float布局存在的问题及解决">2. float布局存在的问题及解决</h1>
-<p>float布局会脱离文档流，但是又不完全脱离文档流。因此，经常会无意间影响到其他元素。<br /></p>
+<p>float布局会脱离普通文档流，但是不会脱离文本流。因此，经常会无意间影响到其他元素。<br /></p>
 <h3 id="div元素的特性">DIV元素的特性</h3>
 <p>对于不设置宽、高的div元素，存在以下特性：</p>
 <ul>
@@ -100,6 +103,8 @@
 <li>如果没有指定float属性，div的宽度将和占满父元素的宽度（不管是不是空的）。</li>
 <li>如果指定了float属性，div的宽度将取决于内部元素的宽度（所以，空的div指定了float属性后既没有高度也没有宽度）</li>
 </ul>
+<h3 id="div元素的渲染">DIV元素的渲染</h3>
+<p>div是按照在HTML文档中的顺序进行渲染的。也就是说，我们先决定前一个div在页面上的位置，然后再决定后一个div的位置。因此，两个同时设置<code>float: right</code>属性的div元素中间间隔1个或多个普通div元素，则它们的位置会有所不同。普通文档流依旧会影响<code>float</code>属性的元素。</p>
 <h3 id="float特性">float特性</h3>
 <p>设置了float属性的元素，会基于它的特性对周围元素产生一些影响，其常见特性如下：</p>
 <ul>
