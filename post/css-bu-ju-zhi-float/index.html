@@ -3,7 +3,7 @@
     <meta charset="utf-8" />
 <meta name="description" content="" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>关于 | 云淡风轻</title>
+<title>CSS布局之float | 云淡风轻</title>
 <link rel="shortcut icon" href="https://kangbb.github.io/favicon.ico?v=1562563085730">
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
@@ -74,28 +74,57 @@
         <div class="post-detail">
           <article class="post">
             <h2 class="post-title">
-              关于
+              CSS布局之float
             </h2>
             <div class="post-info">
               <time class="post-time">
-                · 2019-01-25 ·
+                · 2019-07-08 ·
               </time>
               
             </div>
             
             <div class="post-content">
-              <div align=center><img width = '150' height ='150' src ="file://C:/Users/Kangbeibei/Documents/Gridea/post-images/1562486193749.png"/></div>
-<center><font size=5><b>风轻云淡</b></font></center>
-<br />
-<center><font color=gray size=3>坐看云卷云舒，努力，做自己~</font></center>
-<br />
-<br />
-<center ><font size=2>Front-end Development  |  Back-end Development |  C/C++Development</font></center>
+              <h1 id="1-基本概念">1. 基本概念</h1>
+<p>要深入理解float，首先需要理解下面几个概念：</p>
+<ul>
+<li>**BFC。**可以参考：<a href="https://zhuanlan.zhihu.com/p/25321647">https://zhuanlan.zhihu.com/p/25321647</a></li>
+<li>**margin外边距叠加。**可以参考：<a href="https://segmentfault.com/a/1190000010346113">https://segmentfault.com/a/1190000010346113</a></li>
+</ul>
+<h1 id="2-float布局存在的问题及解决">2. float布局存在的问题及解决</h1>
+<p>float布局会脱离文档流，但是又不完全脱离文档流。因此，经常会无意间影响到其他元素。<br /></p>
+<h3 id="div元素的特性">DIV元素的特性</h3>
+<p>对于不设置宽、高的div元素，存在以下特性：</p>
+<ul>
+<li>空的div是没有高度的。</li>
+<li>有内容的div其高度取决于内容的高度。</li>
+<li>如果没有指定float属性，div的宽度将和占满父元素的宽度（不管是不是空的）。</li>
+<li>如果指定了float属性，div的宽度将取决于内部元素的宽度（所以，空的div指定了float属性后既没有高度也没有宽度）</li>
+</ul>
+<h3 id="float特性">float特性</h3>
+<p>设置了float属性的元素，会基于它的特性对周围元素产生一些影响，其常见特性如下：</p>
+<ul>
+<li><strong>文字环绕。</strong> 使用float的元素虽然脱离的正常的文档流，但是还会占有正常文档流的内容空间。</li>
+<li><strong>包裹性。</strong> 使用float的元素会自动加上一个块级框，也就是可以像块级元素那样设置宽高。</li>
+<li><strong>破坏性。</strong> 使用float的元素会使父容器的高度塌陷，也就是父元素在高度计算的时候会忽略浮动的元素。</li>
+</ul>
+<p>更详细的的内容，请参考：<a href="https://blog.csdn.net/qq_22855325/article/details/78015502">https://blog.csdn.net/qq_22855325/article/details/78015502</a></p>
+<h3 id="解决float带来的问题">解决float带来的问题</h3>
+<p>要解决float带来的问题，可以选择清除float属性。与使用float的元素不同关系的元素也需要采取不同的清除方式。<br/>
+这篇文章给出了4中方式，应对不同的情况：<a href="https://juejin.im/post/59e7190bf265da4307025d91">https://juejin.im/post/59e7190bf265da4307025d91</a></p>
 
             </div>
           </article>
         </div>
 
+        
+          <div class="next-post">
+            <div class="next">下一篇</div>
+            <a href="https://kangbb.github.io/post/css-bu-ju-zhi-dui-qi">
+              <h3 class="post-title">
+                CSS布局之对齐
+              </h3>
+            </a>
+          </div>
         
 
         

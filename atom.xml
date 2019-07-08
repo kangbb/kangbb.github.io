@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://kangbb.github.io</id>
     <title>云淡风轻</title>
-    <updated>2019-07-07T18:29:56.632Z</updated>
+    <updated>2019-07-08T05:18:08.633Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://kangbb.github.io"/>
     <link rel="self" href="https://kangbb.github.io/atom.xml"/>
@@ -10,6 +10,41 @@
     <logo>https://kangbb.github.io/images/avatar.png</logo>
     <icon>https://kangbb.github.io/favicon.ico</icon>
     <rights>All rights reserved 2019, 云淡风轻</rights>
+    <entry>
+        <title type="html"><![CDATA[CSS布局之float]]></title>
+        <id>https://kangbb.github.io/post/css-bu-ju-zhi-float</id>
+        <link href="https://kangbb.github.io/post/css-bu-ju-zhi-float">
+        </link>
+        <updated>2019-07-08T02:35:03.000Z</updated>
+        <content type="html"><![CDATA[<h1 id="1-基本概念">1. 基本概念</h1>
+<p>要深入理解float，首先需要理解下面几个概念：</p>
+<ul>
+<li>**BFC。**可以参考：<a href="https://zhuanlan.zhihu.com/p/25321647">https://zhuanlan.zhihu.com/p/25321647</a></li>
+<li>**margin外边距叠加。**可以参考：<a href="https://segmentfault.com/a/1190000010346113">https://segmentfault.com/a/1190000010346113</a></li>
+</ul>
+<h1 id="2-float布局存在的问题及解决">2. float布局存在的问题及解决</h1>
+<p>float布局会脱离文档流，但是又不完全脱离文档流。因此，经常会无意间影响到其他元素。<br /></p>
+<h3 id="div元素的特性">DIV元素的特性</h3>
+<p>对于不设置宽、高的div元素，存在以下特性：</p>
+<ul>
+<li>空的div是没有高度的。</li>
+<li>有内容的div其高度取决于内容的高度。</li>
+<li>如果没有指定float属性，div的宽度将和占满父元素的宽度（不管是不是空的）。</li>
+<li>如果指定了float属性，div的宽度将取决于内部元素的宽度（所以，空的div指定了float属性后既没有高度也没有宽度）</li>
+</ul>
+<h3 id="float特性">float特性</h3>
+<p>设置了float属性的元素，会基于它的特性对周围元素产生一些影响，其常见特性如下：</p>
+<ul>
+<li><strong>文字环绕。</strong> 使用float的元素虽然脱离的正常的文档流，但是还会占有正常文档流的内容空间。</li>
+<li><strong>包裹性。</strong> 使用float的元素会自动加上一个块级框，也就是可以像块级元素那样设置宽高。</li>
+<li><strong>破坏性。</strong> 使用float的元素会使父容器的高度塌陷，也就是父元素在高度计算的时候会忽略浮动的元素。</li>
+</ul>
+<p>更详细的的内容，请参考：<a href="https://blog.csdn.net/qq_22855325/article/details/78015502">https://blog.csdn.net/qq_22855325/article/details/78015502</a></p>
+<h3 id="解决float带来的问题">解决float带来的问题</h3>
+<p>要解决float带来的问题，可以选择清除float属性。与使用float的元素不同关系的元素也需要采取不同的清除方式。<br/>
+这篇文章给出了4中方式，应对不同的情况：<a href="https://juejin.im/post/59e7190bf265da4307025d91">https://juejin.im/post/59e7190bf265da4307025d91</a></p>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[CSS布局之对齐]]></title>
         <id>https://kangbb.github.io/post/css-bu-ju-zhi-dui-qi</id>
